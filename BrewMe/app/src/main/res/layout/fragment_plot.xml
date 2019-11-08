@@ -19,7 +19,7 @@
         android:layout_marginLeft="17dp" />
 
     <Button
-        android:id = "@+id/addButton"
+        android:id = "@+id/notificationButton"
         android:layout_width = "wrap_content"
         android:layout_height = "wrap_content"
         android:layout_alignParentBottom = "true"
@@ -39,6 +39,17 @@
         android:layout_marginEnd="300dp"
         android:layout_marginRight="300dp"
         android:text = "C/F"
+        android:layout_alignParentRight="true" />
+    <Button
+        android:id = "@+id/btButton"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:layout_alignParentBottom = "true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom = "67dp"
+        android:layout_marginEnd="300dp"
+        android:layout_marginRight="300dp"
+        android:text = "Connect"
         android:layout_alignParentRight="true" />
 
     <TextView
