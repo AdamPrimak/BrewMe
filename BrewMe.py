@@ -39,18 +39,26 @@ def LED_color(): #hard coded limits on temperature - Green = within limits, Yell
         GPIO.output(13,GPIO.LOW)
         GPIO.output(12,GPIO.HIGH)
         GPIO.output(23,GPIO.HIGH)
+        time.sleep(0.75)
         return "Temprature is outside of limits"
     if temp[0] < 15 and temp[0] > 5 or temp[0] < 30 and temp[0] > 20:
         GPIO.output(12,GPIO.LOW)
         GPIO.output(18,GPIO.LOW)
-        GPIO.output(23,GPIO.LOW)
         GPIO.output(13,GPIO.HIGH)
+        GPIO.output(23,GPIO.HIGH)
+        time.sleep(0.25)
+        GPIO.output(23,GPIO.LOW)
+        time.sleep(0.25)
+        GPIO.output(23,GPIO.HIGH)
+        time.sleep(0.25)
+        GPIO.output(23,GPIO.LOW)
         return "Temperature is near the limits"
     if temp[0] < 20 and temp[0] > 15:
         GPIO.output(12,GPIO.LOW)
         GPIO.output(13,GPIO.LOW)
         GPIO.output(23,GPIO.LOW)
         GPIO.output(18,GPIO.HIGH)
+        time.sleep(0.75)
         return "Temperature is within the range"
     
  
