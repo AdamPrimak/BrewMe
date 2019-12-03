@@ -92,11 +92,16 @@ public class GalleryFragment extends Fragment {
         graphView.getViewport().setMinX(0);
         graphView.getViewport().setMaxX(20);
         graphView.getViewport().setMinY(0.0);
-        graphView.getViewport().setMaxY(10.0);
+        graphView.getViewport().setMaxY(100.0);
         int i = 0;
         while (i < 20) {
             Random rand = new Random();
-            series.appendData(new DataPoint(i, rand.nextInt(10)), true, 50);
+            if (i % 2 == 0) {
+                series.appendData(new DataPoint(i, (i + 1) * 4), true, 50);
+            }
+            else{
+                series.appendData(new DataPoint(i, (i + 2) * 4), true, 50);
+            }
             graphView.addSeries(series);
             i++;
         }
